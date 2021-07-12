@@ -87,7 +87,7 @@ function lose(user,comp){
 
 
 function draw(user){
-	result_div.innerHTML=  "ITS A"+ " DRAW!".fontcolor('#2B22C8');
+	result_div.innerHTML=  "ITS A"+ " DRAW!".fontcolor('#1273BE');
 	document.getElementById(user).classList.add('blue-glow');
 	setTimeout(function(){document.getElementById(user).classList.remove('blue-glow')},1000);
 
