@@ -67,7 +67,7 @@ header>h1{
 	margin: 50px 0px;
 }
 .choice{
-	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	padding: 10px;
 	display: inline-block;
 	margin: 0px 20px;
