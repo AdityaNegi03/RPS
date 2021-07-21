@@ -11,7 +11,8 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
-
+const saitama = document.getElementById("bclass");
+const silverfang = document.getElementById("sclass");
 
 
 function main()
@@ -66,12 +67,14 @@ function win(user,comp){
 	userScore++;
 	let res1=changecomp(comp);
 	let res2=changeuser(user);
-	
-  
+	 saitama.src="images/opm-1068467-1280x0.jpg";
+      silverfang.src="images/Cropped.jpg";
     userScore_span.innerHTML= userScore;
     result_div.innerHTML= res2 +" beats "+ res1 +". You" +" WIN".fontcolor('#4dcc7d');
     document.getElementById(user).classList.add('green-glow');
+
     setTimeout(function(){document.getElementById(user).classList.remove('green-glow')},1000);
+   
 }
 
 function lose(user,comp){
@@ -79,6 +82,8 @@ function lose(user,comp){
 	let res1=changecomp(comp);
 	let res2=changeuser(user);
 
+     saitama.src="images/maxresdefault.jpg";
+     silverfang.src="images/silwin.jpg";
 	compScore_span.innerHTML= compScore;
 	result_div.innerHTML= res1 +" beats "+ res2 +". You" +" LOSE".fontcolor('#fc121b');
 	 document.getElementById(user).classList.add('red-glow');
@@ -87,6 +92,8 @@ function lose(user,comp){
 
 
 function draw(user){
+	saitama.src="images/okface.jpg";
+	silverfang.src="images/draw.jpg";
 	result_div.innerHTML=  "ITS A"+ " DRAW!".fontcolor('#1273BE');
 	document.getElementById(user).classList.add('blue-glow');
 	setTimeout(function(){document.getElementById(user).classList.remove('blue-glow')},1000);
